@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ember & Olive | Local Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="logo" href="#top">
+          Ember <span>&amp;</span> Olive
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#menu">Menu</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#reservations">Reservations</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" role="img" aria-label="Warm restaurant interior"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">Seasonal • Local • Crafted</p>
+          <h1 id="hero-title">Welcome to Ember &amp; Olive</h1>
+          <p class="hero-subtitle">
+            A neighborhood bistro where wood-fired comfort meets modern culinary
+            artistry.
+          </p>
+          <a class="btn btn-primary" href="#reservations">Reserve a Table</a>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="container about-grid">
+          <div class="about-text">
+            <p class="eyebrow">Our Story</p>
+            <h2>Gathered around the hearth since 1998.</h2>
+            <p>
+              Ember &amp; Olive began as a family kitchen rooted in slow-cooked
+              traditions. Today, we pair heritage recipes with farmers-market
+              freshness, welcoming guests to linger over thoughtfully prepared
+              plates and warm hospitality.
+            </p>
+            <p>
+              From weekend brunch to candlelit dinners, our team crafts
+              experiences that celebrate connection, comfort, and the joy of
+              sharing good food.
+            </p>
+          </div>
+          <div class="about-images">
+            <figure class="about-circle">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"
+                alt="Plated seasonal dish"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="about-circle">
+              <img
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80"
+                alt="Chef finishing a dish"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="about-circle">
+              <img
+                src="https://images.unsplash.com/photo-1528712306091-ed0763094c98?auto=format&fit=crop&w=600&q=80"
+                alt="Fresh ingredients on a wooden table"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu section" id="menu">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Menu Highlights</p>
+            <h2>Crafted for every time of day.</h2>
+          </div>
+          <div class="menu-tabs" role="tablist">
+            <button class="tab active" role="tab" aria-selected="true" data-tab="breakfast">
+              Breakfast
+            </button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="lunch">
+              Lunch
+            </button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="dinner">
+              Dinner
+            </button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="drinks">
+              Drinks
+            </button>
+          </div>
+
+          <div class="menu-panels">
+            <div class="menu-panel active" data-panel="breakfast">
+              <article class="menu-card">
+                <img
+                  src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=800&q=80"
+                  alt="Citrus brioche toast"
+                  loading="lazy"
+                />
+                <div class="menu-card-body">
+                  <div class="menu-card-header">
+                    <h3>Citrus Brioche Toast</h3>
+                    <span>$12</span>
+                  </div>
+                  <p>
+                    Honeyed ricotta, candied citrus, toasted almonds, and
+                    vanilla maple drizzle.
+                  </p>
+                </div>
+              </article>
+              <article class="menu-card">
+                <img
+                  src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80"
+                  alt="Garden omelet"
+                  loading="lazy"
+                />
+                <div class="menu-card-body">
+                  <div class="menu-card-header">
+                    <h3>Garden Omelet</h3>
+                    <span>$14</span>
+                  </div>
+                  <p>
+                    Farm eggs, roasted peppers, spinach, goat cheese, and herb
+                    salad.
+                  </p>
+                </div>
+              </article>
+              <article class="menu-card">
+                <img
+                  src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=800&q=80"
+                  alt="Breakfast bowl"
+                  loading="lazy"
+                />
+                <div class="menu-card-body">
+                  <div class="menu-card-header">
+                    <h3>Sunrise Grain Bowl</h3>
+                    <span>$13</span>
+                  </div>
+                  <p>
+                    Warm farro, charred kale, soft egg, avocado, and smoked
+                    chili oil.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="menu-panel" data-panel="lunch">
+              <article class="menu-card">
+                <img
+                  src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&fit=crop&w=800&q=80"
+                  alt="Grilled chicken salad"
+                  loading="lazy"
+                />
+                <div class="menu-card-body">
+                  <div class="menu-card-header">
+                    <h3>Harvest Chicken Salad</h3>
+                    <span>$18</span>
+                  </div>
+                  <p>
+                    Citrus-marinated chicken, roasted squash, farro, toasted
+                    pepitas, and herb vinaigrette.
+                  </p>
+                </div>
+              </article>
+              <article class="menu-card">
+                <img
+                  src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=80"
+                  alt="Wood-fired flatbread"
+                  loading="lazy"
+                />
+                <div class="menu-card-body">
+                  <div class="menu-card-header">
+                    <h3>Wood-Fired Flatbread</h3>
+                    <span>$16</span>
+                  </div>
+                  <p>
+                    Heirloom tomatoes, basil pesto, burrata, and chili honey on
+                    house dough.
+                  </p>
+                </div>
+              </article>
+              <article class="menu-card">
+                <img
+                  src="https://images.unsplash.com/photo-1505575967455-40e256f73376?auto=format&fit=crop&w=800&q=80"
+                  alt="Bistro sandwich"
+                  loading="lazy"
+                />
+                <div class="menu-card-body">
+                  <div class="menu-card-header">
+                    <h3>Signature Bistro Melt</h3>
+                    <span>$17</span>
+                  </div>
+                  <p>
+                    Smoked turkey, caramelized onion, provolone, and rosemary
+                    aioli on sourdough.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="menu-panel" data-panel="dinner">
+              <article class="menu-card">
+                <img
+                  src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80"
+                  alt="Seared salmon"
+                  loading="lazy"
+                />
+                <div class="menu-card-body">
+                  <div class="menu-card-header">
+                    <h3>Cedar Seared Salmon</h3>
+                    <span>$28</span>
+                  </div>
+                  <p>
+                    Charred lemon beurre blanc, wild rice pilaf, and market
+                    greens.
+                  </p>
+                </div>
+              </article>
+              <article class="menu-card">
+                <img
+                  src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=800&q=80"
+                  alt="Short rib entree"
+                  loading="lazy"
+                />
+                <div class="menu-card-body">
+                  <div class="menu-card-header">
+                    <h3>Red Wine Short Rib</h3>
+                    <span>$32</span>
+                  </div>
+                  <p>
+                    Slow-braised beef, garlic potato purée, and charred broccolini.
+                  </p>
+                </div>
+              </article>
+              <article class="menu-card">
+                <img
+                  src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?auto=format&fit=crop&w=800&q=80"
+                  alt="Mushroom risotto"
+                  loading="lazy"
+                />
+                <div class="menu-card-body">
+                  <div class="menu-card-header">
+                    <h3>Wild Mushroom Risotto</h3>
+                    <span>$24</span>
+                  </div>
+                  <p>
+                    Truffle-scented arborio, roasted mushrooms, and aged parmesan.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="menu-panel" data-panel="drinks">
+              <article class="menu-card">
+                <img
+                  src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&q=80"
+                  alt="Craft cocktail"
+                  loading="lazy"
+                />
+                <div class="menu-card-body">
+                  <div class="menu-card-header">
+                    <h3>Ember Old Fashioned</h3>
+                    <span>$12</span>
+                  </div>
+                  <p>
+                    Smoked bourbon, toasted orange, black cherry, and maple
+                    bitters.
+                  </p>
+                </div>
+              </article>
+              <article class="menu-card">
+                <img
+                  src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=800&q=80"
+                  alt="Sparkling mocktail"
+                  loading="lazy"
+                />
+                <div class="menu-card-body">
+                  <div class="menu-card-header">
+                    <h3>Citrus Garden Spritz</h3>
+                    <span>$9</span>
+                  </div>
+                  <p>
+                    Blood orange, rosemary, sparkling tonic, and botanical
+                    syrup.
+                  </p>
+                </div>
+              </article>
+              <article class="menu-card">
+                <img
+                  src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+                  alt="Coffee latte"
+                  loading="lazy"
+                />
+                <div class="menu-card-body">
+                  <div class="menu-card-header">
+                    <h3>Barista Latte</h3>
+                    <span>$6</span>
+                  </div>
+                  <p>
+                    Single-origin espresso with oat or almond milk and vanilla
+                    bean.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery section" id="gallery">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Gallery</p>
+            <h2>Moments from our dining room.</h2>
+          </div>
+          <div class="gallery-grid">
+            <button class="gallery-item" data-lightbox="1">
+              <img
+                src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=800&q=80"
+                alt="Restaurant interior seating"
+                loading="lazy"
+              />
+            </button>
+            <button class="gallery-item" data-lightbox="2">
+              <img
+                src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=80"
+                alt="Chef preparing food"
+                loading="lazy"
+              />
+            </button>
+            <button class="gallery-item" data-lightbox="3">
+              <img
+                src="https://images.unsplash.com/photo-1541542684-4b6b3a9a8b14?auto=format&fit=crop&w=800&q=80"
+                alt="Table with wine glasses"
+                loading="lazy"
+              />
+            </button>
+            <button class="gallery-item" data-lightbox="4">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80"
+                alt="Seasonal entree"
+                loading="lazy"
+              />
+            </button>
+            <button class="gallery-item" data-lightbox="5">
+              <img
+                src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=800&q=80"
+                alt="Restaurant event setup"
+                loading="lazy"
+              />
+            </button>
+            <button class="gallery-item" data-lightbox="6">
+              <img
+                src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80"
+                alt="Signature dessert"
+                loading="lazy"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="reservations section" id="reservations">
+        <div class="container reservations-grid">
+          <div class="reservations-copy">
+            <p class="eyebrow">Reserve</p>
+            <h2>Your table is waiting.</h2>
+            <p>
+              Reserve your table in seconds and let us prepare a dining
+              experience tailored to your celebration.
+            </p>
+            <div class="hours-card">
+              <h3>Hours</h3>
+              <p>Mon - Thu: 4pm - 10pm</p>
+              <p>Fri: 4pm - 11pm</p>
+              <p>Sat: 10am - 11pm</p>
+              <p>Sun: 10am - 9pm</p>
+            </div>
+          </div>
+          <form class="reservation-form" aria-label="Reservation form">
+            <div class="form-row">
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+              <label>
+                Email
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@email.com"
+                  required
+                />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Phone
+                <input type="tel" name="phone" placeholder="(555) 555-5555" />
+              </label>
+              <label>
+                Guests
+                <select name="guests" required>
+                  <option value="">Select guests</option>
+                  <option value="1">1 guest</option>
+                  <option value="2">2 guests</option>
+                  <option value="3">3 guests</option>
+                  <option value="4">4 guests</option>
+                  <option value="5">5 guests</option>
+                  <option value="6">6 guests</option>
+                  <option value="7">7 guests</option>
+                  <option value="8">8 guests</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Date
+                <input type="date" name="date" required />
+              </label>
+              <label>
+                Time
+                <input type="time" name="time" required />
+              </label>
+            </div>
+            <button class="btn btn-primary btn-glow" type="submit">
+              Submit Reservation
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-card">
+            <p class="eyebrow">Visit Us</p>
+            <h2>Find us in the heart of the city.</h2>
+            <p>
+              128 Market Street<br />
+              Riverside District, CA 90210
+            </p>
+            <p class="contact-info">
+              <a href="tel:+15551234567">(555) 123-4567</a><br />
+              <a href="mailto:hello@emberandolive.com">hello@emberandolive.com</a>
+            </p>
+            <div class="socials">
+              <a href="#" aria-label="Instagram">Instagram</a>
+              <a href="#" aria-label="Facebook">Facebook</a>
+              <a href="#" aria-label="TikTok">TikTok</a>
+            </div>
+          </div>
+          <div class="map-card">
+            <iframe
+              title="Ember &amp; Olive location map"
+              src="https://www.google.com/maps?q=Riverside+District+CA+90210&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Ember &amp; Olive. Crafted with warmth.</p>
+        <a href="#top">Back to top</a>
+      </div>
+    </footer>
+
+    <div class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" aria-label="Close gallery">&times;</button>
+      <img class="lightbox-image" src="" alt="Gallery image" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
