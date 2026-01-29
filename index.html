@@ -14,6 +14,12 @@
   </head>
   <body>
     <header class="site-header" id="top">
+      <div class="portfolio-banner">
+        <div class="container banner-inner">
+          <span>Portfolio demo website • Not a real restaurant.</span>
+          <a href="mailto:hello@emberandolive.com">Contact to build yours</a>
+        </div>
+      </div>
       <div class="container header-inner">
         <a class="logo" href="#top">
           Ember <span>&amp;</span> Olive
@@ -36,6 +42,7 @@
         <div class="hero-media" role="img" aria-label="Warm restaurant interior"></div>
         <div class="hero-overlay"></div>
         <div class="container hero-content">
+          <span class="hero-badge">Example concept for client portfolio</span>
           <p class="eyebrow">Seasonal • Local • Crafted</p>
           <h1 id="hero-title">Welcome to Ember &amp; Olive</h1>
           <p class="hero-subtitle">
@@ -47,7 +54,7 @@
       </section>
 
       <section class="about section" id="about">
-        <div class="container about-grid">
+        <div class="container about-grid reveal">
           <div class="about-text">
             <p class="eyebrow">Our Story</p>
             <h2>Gathered around the hearth since 1998.</h2>
@@ -89,7 +96,7 @@
         </div>
       </section>
 
-      <section class="menu section" id="menu">
+      <section class="menu section reveal" id="menu">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Menu Highlights</p>
@@ -328,7 +335,7 @@
         </div>
       </section>
 
-      <section class="gallery section" id="gallery">
+      <section class="gallery section reveal" id="gallery">
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Gallery</p>
@@ -346,13 +353,6 @@
               <img
                 src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=80"
                 alt="Chef preparing food"
-                loading="lazy"
-              />
-            </button>
-            <button class="gallery-item" data-lightbox="3">
-              <img
-                src="https://images.unsplash.com/photo-1541542684-4b6b3a9a8b14?auto=format&fit=crop&w=800&q=80"
-                alt="Table with wine glasses"
                 loading="lazy"
               />
             </button>
@@ -382,7 +382,7 @@
       </section>
 
       <section class="reservations section" id="reservations">
-        <div class="container reservations-grid">
+        <div class="container reservations-grid reveal">
           <div class="reservations-copy">
             <p class="eyebrow">Reserve</p>
             <h2>Your table is waiting.</h2>
@@ -452,7 +452,7 @@
       </section>
 
       <section class="contact section" id="contact">
-        <div class="container contact-grid">
+        <div class="container contact-grid reveal">
           <div class="contact-card">
             <p class="eyebrow">Visit Us</p>
             <h2>Find us in the heart of the city.</h2>
@@ -484,7 +484,9 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>© 2026 Ember &amp; Olive. Crafted with warmth.</p>
+        <p>
+          © 2026 Ember &amp; Olive. Crafted with warmth. Portfolio demo concept.
+        </p>
         <a href="#top">Back to top</a>
       </div>
     </footer>

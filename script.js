@@ -6,6 +6,7 @@ const galleryItems = document.querySelectorAll(".gallery-item");
 const lightbox = document.querySelector(".lightbox");
 const lightboxImage = document.querySelector(".lightbox-image");
 const lightboxClose = document.querySelector(".lightbox-close");
+const revealItems = document.querySelectorAll(".reveal");
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
@@ -68,3 +69,19 @@ document.addEventListener("keydown", (event) => {
     closeLightbox();
   }
 });
+
+if (revealItems.length > 0) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+}
